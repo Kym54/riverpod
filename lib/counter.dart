@@ -16,4 +16,10 @@ extension OptionalInflixAddition <T extends num> on T?{
 
 class Counter extends StateNotifier<int?>{
   Counter(): super(null);
+  void increment() => state = state  == null ? 1 : state + 1;
 }
+
+
+final counterProvider =StateNotifierProvider <Counter, int?>(
+        (ref) => Counter()
+);
