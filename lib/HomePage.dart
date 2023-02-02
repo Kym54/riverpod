@@ -14,7 +14,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
        a rebuild of the scaffold instead wrap your title with a 
        consumer widget
       */
-     return Scaffold(
+     return MaterialApp(
+       darkTheme: ThemeData(),
+       themeMode: ThemeMode.dark,
+       debugShowCheckedModeBanner: false,
+       home:Scaffold(
        appBar: AppBar(
          title: Consumer(
            builder: (context, ref,child){
@@ -42,6 +46,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
                ))
          ],
        ),
+     ),
      );
    }
  }
